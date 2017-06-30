@@ -156,9 +156,9 @@ if __name__=='__main__':
   parser.add_argument('-i2','--index2',help='index of the column containing the normalised form',type=int,default=2)
   args=parser.parse_args()
   trie=pickle.load(open(os.path.join(reldir,args.lang+'.marisa')))
-  brown=dict([(e[1].decode('utf8'),e[0]) for e in [e.split('\t') for e in open(args.lang+'.brown')]])
+  brown=dict([(e[1].decode('utf8'),e[0]) for e in [e.split('\t') for e in open(os.path.join(reldir,args.lang+'.brown'))]])
   normdict={}
-  for orig,norm in zip(open(args.lang+'.orig'),open(args.lang+'.norm')):
+  for orig,norm in zip(open(os.path.join(reldir,args.lang+'.orig')),open(os.path.join(reldir,args.lang+'.norm'))):
     if orig==norm:
       continue
     orig=orig.decode('utf8').strip()
