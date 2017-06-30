@@ -1,9 +1,9 @@
-Jst
-nevem
-kva
-boš
-naredu
-,
-pizda
-.
+jaz	Jst
+ne vem	nevem
+kaj	kva
+boš	boš
+naredil	naredu
+,	,
+pizda	pizda
+.	.
 
